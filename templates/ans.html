@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>your text is</h1><br>
+
+
+    <div>
+        <pre>
+        <textarea name="" id="myOutput" cols="30" rows="10">{{finaltext}}</textarea>
+        </pre>
+
+
+
+        <button onclick="myFunction()">Copy text</button>
+
+        <script>
+            function myFunction() {
+                // Get the text field
+                var copyText = document.getElementById("myOutput");
+
+                // Select the text field
+                copyText.select();
+                copyText.setSelectionRange(0, 99999); // For mobile devices
+
+                // Copy the text inside the text field
+                navigator.clipboard.writeText(copyText.value);
+
+                // Alert the copied text
+                alert("Copied the text: " + copyText.value);
+            }
+        </script>
+    </div>
+<br>
+
+    <a href="/"> Edit this text
+        <script>
+            document.getElementById('myInput').value = "10";
+        </script>
+    </a>
+
+    <div>
+        <textarea name="" id="" cols="30" rows="10">{{tc}}</textarea>
+    </div>
+
+    <a href="/"> go back</a>
+
+
+
+</body>
+
+</html>

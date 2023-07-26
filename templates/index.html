@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>template is working</title>
+</head>
+
+<body>
+    <h1>Welcome to mysite</h1>
+    <form action="analyze">
+        <textarea name="data" id="myInput" cols="30" rows="10" style="width: 1486px; height: 114px;"></textarea>
+
+        <div>
+            remove puntuations: <input type="checkbox" name="removepunc" id="">
+        </div>
+        <br>
+
+        <div>
+            capitalise: <input type="checkbox" name="capitalise" id="">
+        </div>
+        <br>
+    
+        <div>
+            newline remover : <input type="checkbox" name="newlineremove" id="">
+        </div>
+        <br>
+        <div>
+            extra space remover : <input type="checkbox" name="spaceremove" id="">
+        </div>
+        <br>
+        <hr>
+        
+        <div>
+            char count : <input type="checkbox" name="charcount" id="">
+        </div>
+        <br>
+        <div>
+            Check Brackets : <input type="checkbox" name="checkbrackets" id="">
+        </div>
+        <br>
+        <div>
+            Check grammar : <input type="checkbox" name="checkgrammar" id="">
+        </div>
+        <br>
+
+
+
+        <button type="submit">submit now</button>
+    </form>
+</body>
+
+</html>
