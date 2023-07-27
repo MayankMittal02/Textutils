@@ -78,8 +78,8 @@ def check_grammar(s: str) -> str:
 
 
 Dict = {}
-text = "mayank"
-text2 = ""
+# text = "mayank"
+# text2 = "mittal"
 
 
 def analyze(request):
@@ -122,35 +122,24 @@ def analyze(request):
         che = che + check_grammar(text2)
     Dict["finaltext"] = text2
     Dict["tc"] = che
-    # Dict["originaltext"] = text
+    Dict["originaltext"] = text
 
     return render(request, "ans.html", Dict)
 
 
 def reedit(request):
-
     edit_this = request.GET.get("editthis", "off")
-    # edit_this = 3
     edit_original = request.GET.get("editoriginal", "off")
     edit_new = request.GET.get("editnew", "off")
 
-    # print(edit_new + edit_original + edit_this)
+    if edit_this == "edit this":
+        Dict["newtext"] = Dict["finaltext"]
+        edit_this = "off"
+    elif edit_original == "edit original":
+        Dict["newtext"] = Dict["originaltext"]
+        edit_original = "off"
+    elif edit_new == "edit new":
+        Dict["newtext"] = ""
+        edit_new = "off"
 
-
-    print(edit_this)
-    # print(2)
-
-
-    # if edit_this == "edit this":
-    #     Dict["newtext"] = text2
-    #     edit_this = "off"
-    # elif edit_original == "edit original":
-    #     Dict["newtext"] = text
-    #     edit_original = "off"
-    # elif edit_new == "edit new":
-    #     Dict["newtext"] = ""
-    #     edit_new = "off"
-
-   
-
-    return render(request, "ans.html", Dict)
+    return render(request, "index.html", Dict)
