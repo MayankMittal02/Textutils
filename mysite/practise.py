@@ -1,6 +1,4 @@
-a = 'mayank\n'
-a = a+"mittal"
-a= a.replace('\n','')
+a = "mayank"
 print(a)
-
-# print(5)
+a="mittla"
+print(a)

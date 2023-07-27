@@ -11,7 +11,7 @@
 <body>
     <h1>Welcome to mysite</h1>
     <form action="analyze">
-        <textarea name="data" id="myInput" cols="30" rows="10" style="width: 1486px; height: 114px;"></textarea>
+        <textarea name="data" id="myInput" cols="30" rows="10" style="width: 1486px; height: 114px;">{{originaltext}}</textarea>
 
         <div>
             remove puntuations: <input type="checkbox" name="removepunc" id="">
@@ -22,7 +22,7 @@
             capitalise: <input type="checkbox" name="capitalise" id="">
         </div>
         <br>
-    
+
         <div>
             newline remover : <input type="checkbox" name="newlineremove" id="">
         </div>
@@ -32,7 +32,7 @@
         </div>
         <br>
         <hr>
-        
+
         <div>
             char count : <input type="checkbox" name="charcount" id="">
         </div>
@@ -50,6 +50,12 @@
 
         <button type="submit">submit now</button>
     </form>
+
+
+    <!-- <script src="/static/index.js"></script> -->
+    <script src="/static/index2.js"></script>
+
+
 </body>
 
 </html>

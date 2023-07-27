@@ -77,6 +77,11 @@ def check_grammar(s: str) -> str:
     return s2
 
 
+Dict = {}
+text = "mayank"
+text2 = ""
+
+
 def analyze(request):
     removepunc = request.GET.get("removepunc", "off")
     cap = request.GET.get("capitalise", "off")
@@ -87,7 +92,8 @@ def analyze(request):
     checkbrackets = request.GET.get("checkbrackets", "off")
     checkgrammer = request.GET.get("checkgrammar", "off")
 
-    Dict = {"finaltext": text, "tc": ""}
+    # Dict = {"finaltext": text, "tc": ""}
+    Dict["finaltext"] = text
     che = ""
     text2 = text
 
@@ -116,6 +122,35 @@ def analyze(request):
         che = che + check_grammar(text2)
     Dict["finaltext"] = text2
     Dict["tc"] = che
-    Dict["originaltext"] = text
+    # Dict["originaltext"] = text
+
+    return render(request, "ans.html", Dict)
+
+
+def reedit(request):
+
+    edit_this = request.GET.get("editthis", "off")
+    # edit_this = 3
+    edit_original = request.GET.get("editoriginal", "off")
+    edit_new = request.GET.get("editnew", "off")
+
+    # print(edit_new + edit_original + edit_this)
+
+
+    print(edit_this)
+    # print(2)
+
+
+    # if edit_this == "edit this":
+    #     Dict["newtext"] = text2
+    #     edit_this = "off"
+    # elif edit_original == "edit original":
+    #     Dict["newtext"] = text
+    #     edit_original = "off"
+    # elif edit_new == "edit new":
+    #     Dict["newtext"] = ""
+    #     edit_new = "off"
+
+   
 
     return render(request, "ans.html", Dict)

@@ -27,4 +27,5 @@ urlpatterns = [
     # path('spaceremover' , views.spaceremover , name='spaceremover'),
     # path('charcount' , views.charcount , name='charcount'),
     path('analyze' , views.analyze , name="analyze"),
+    path('reedit' , views.reedit , name="editthis"),
 ]

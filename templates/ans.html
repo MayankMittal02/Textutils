@@ -8,6 +8,7 @@
 </head>
 
 <body>
+
     <h1>your text is</h1><br>
 
 
@@ -37,13 +38,26 @@
             }
         </script>
     </div>
-<br>
+    <br>
 
-    <a href="/"> Edit this text
-        <script>
-            document.getElementById('myInput').value = "10";
-        </script>
-    </a>
+    <!-- <a href="/"> 
+        <button id="editthis">Edit this text</button>
+    </a> -->
+
+    <!-- <button id="editthis" action ="reedit">edit this</button> -->
+
+    <form action="reedit">
+
+
+        <button type="submit" name="editoriginal" value="edit original"> edit original</button>
+        <button type="submit" name="editnew" value="edit new"> edit new</button>
+        <button type="submit" name="editthis" value="edit this"> edit this</button>
+
+        <!-- <button type="submit" name ="editthis" value="edit this"> edit this</button> -->
+
+    </form>
+
+
 
     <div>
         <textarea name="" id="" cols="30" rows="10">{{tc}}</textarea>
@@ -51,6 +65,7 @@
 
     <a href="/"> go back</a>
 
+    <script src="/static/index2.js"></script>
 
 
 </body>
